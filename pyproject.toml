@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "coach"
+version = "0.1.0"
+description = "Conversational chess coach for Ajedrez.ai"
+requires-python = ">=3.11"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Joe Rodas", email = "joe.rodas23@gmail.com" }]
+dependencies = [
+    "anthropic>=0.39.0",
+    "python-chess>=1.999",
+    "sentence-transformers>=3.0.0",
+    "numpy>=1.26.0",
+    "click>=8.1.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.5.0",
+    "mypy>=1.10.0",
+]
+web = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+]
+
+[project.scripts]
+coach = "coach.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/coach"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

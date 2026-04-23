@@ -1,0 +1,15 @@
+.venv
+__pycache__
+.git
+.gitignore
+.env
+.env.example
+*.pyc
+PROJECT_COACH.md
+WRITEUP_PHASE1.md
+data/games
+tests
+scripts
+.pytest_cache
+.ruff_cache
+.mypy_cache

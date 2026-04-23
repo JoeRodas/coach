@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coach — Conversational Chess Coach</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    max-width: 780px; margin: 40px auto; padding: 0 20px; line-height: 1.5;
+  }
+  h1 { font-size: 1.6em; margin-bottom: 4px; }
+  .tagline { color: #666; margin-top: 0; }
+  label { display: block; margin-top: 20px; font-weight: 600; font-size: 0.95em; }
+  .meta { color: #888; font-weight: 400; font-size: 0.9em; }
+  textarea, input[type=text], select {
+    width: 100%; padding: 10px; margin-top: 4px; box-sizing: border-box;
+    border: 1px solid #ccc; border-radius: 6px; font-size: 0.95em;
+    font-family: inherit; background: transparent; color: inherit;
+  }
+  textarea {
+    min-height: 180px; font-family: "SF Mono", "Menlo", monospace; font-size: 0.85em;
+  }
+  .row { display: flex; gap: 12px; align-items: end; margin-top: 20px; }
+  .row > * { flex: 0 0 auto; }
+  button {
+    padding: 10px 18px; border: 0; border-radius: 6px;
+    background: #1a1a1a; color: white; font-size: 0.95em; cursor: pointer;
+  }
+  button.secondary { background: transparent; color: inherit; border: 1px solid #ccc; }
+  button:disabled { opacity: 0.5; cursor: wait; }
+  #status { color: #888; font-size: 0.9em; margin-left: 8px; }
+  #result {
+    margin-top: 28px; padding: 18px; background: rgba(127,127,127,0.08);
+    border-radius: 8px; white-space: pre-wrap; font-size: 0.95em;
+  }
+  @media (prefers-color-scheme: dark) {
+    button { background: #eee; color: #111; }
+  }
+</style>
+</head>
+<body>
+<h1>Coach</h1>
+<p class="tagline">Paste a PGN. I'll tell you where you went wrong, why, and what to study next.</p>
+
+<label>PGN <span class="meta">— one game</span></label>
+<textarea id="pgn" placeholder='[Event "Casual"]&#10;1. e4 c5 2. Nf3 d6 3. d4 cxd4 ...'></textarea>
+
+<div class="row">
+  <div style="flex:1">
+    <label>You played as</label>
+    <select id="side">
+      <option value="white">White</option>
+      <option value="black">Black</option>
+    </select>
+  </div>
+  <div style="flex:2">
+    <label>Question <span class="meta">— optional</span></label>
+    <input id="question" type="text" value="Where did I go wrong in this game?">
+  </div>
+</div>
+
+<div class="row">
+  <button id="go">Analyze</button>
+  <button class="secondary" id="sample" type="button">Try a sample game</button>
+  <span id="status"></span>
+</div>
+
+<div id="result" hidden></div>
+
+<script>
+const $ = id => document.getElementById(id);
+
+const SAMPLE_PGN = `[Event "Paris"]
+[Site "Paris FRA"]
+[Date "1858.??.??"]
+[White "Morphy, Paul"]
+[Black "Duke of Brunswick and Count Isouard"]
+[Result "1-0"]
+
+1. e4 e5 2. Nf3 d6 3. d4 Bg4 4. dxe5 Bxf3 5. Qxf3 dxe5 6. Bc4 Nf6
+7. Qb3 Qe7 8. Nc3 c6 9. Bg5 b5 10. Nxb5 cxb5 11. Bxb5+ Nbd7
+12. O-O-O Rd8 13. Rxd7 Rxd7 14. Rd1 Qe6 15. Bxd7+ Nxd7 16. Qb8+ Nxb8
+17. Rd8# 1-0`;
+
+$("sample").addEventListener("click", () => {
+  $("pgn").value = SAMPLE_PGN;
+  $("side").value = "black";
+  $("question").value = "Where did Black go wrong in this game?";
+});
+
+$("go").addEventListener("click", async () => {
+  const pgn = $("pgn").value.trim();
+  if (!pgn) { $("status").textContent = "paste a PGN first"; return; }
+  $("go").disabled = true;
+  $("result").hidden = true;
+  $("status").textContent = "running Stockfish + retrieving master games… (~1–3 min)";
+  try {
+    const r = await fetch("/api/analyze", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        pgn,
+        side: $("side").value,
+        question: $("question").value,
+      }),
+    });
+    if (!r.ok) throw new Error((await r.text()) || r.statusText);
+    const data = await r.json();
+    $("result").textContent = data.answer;
+    $("result").hidden = false;
+    $("status").textContent = "";
+  } catch (e) {
+    $("status").textContent = "error: " + e.message;
+  } finally {
+    $("go").disabled = false;
+  }
+});
+</script>
+</body>
+</html>
