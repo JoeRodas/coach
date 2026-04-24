@@ -12,6 +12,9 @@ dist/
 data/games/*.pgn
 data/*.npz
 data/*.parquet
+data/training/
+data/raw/
+data/checkpoints/
 
 .pytest_cache/
 .ruff_cache/

@@ -1,0 +1,1455 @@
+{
+  "summary": {
+    "date": "2026-04-24",
+    "system": "phase2_encoder",
+    "k": 20,
+    "n_queries": 80,
+    "n_indexed": 8847,
+    "recall@20": 0.2875,
+    "recall@10": 0.1875,
+    "mrr@20": 0.1275,
+    "random_recall@20": 0.2224
+  },
+  "per_query": [
+    {
+      "query_id": "A00-nihalsar-128",
+      "eco": "A00",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 111,
+      "top_ecos": [
+        "A00",
+        "A00",
+        "A00",
+        "A00",
+        "A00",
+        "A00",
+        "A00",
+        "A00",
+        "A00",
+        "A45"
+      ]
+    },
+    {
+      "query_id": "A00-nihalsar-20",
+      "eco": "A00",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 111,
+      "top_ecos": [
+        "A00",
+        "A00",
+        "D31",
+        "A01",
+        "A01",
+        "D31",
+        "A05",
+        "D31",
+        "B53",
+        "D31"
+      ]
+    },
+    {
+      "query_id": "A01-nihalsar-96",
+      "eco": "A01",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 428,
+      "top_ecos": [
+        "A01",
+        "A01",
+        "A01",
+        "A01",
+        "A01",
+        "A01",
+        "A01",
+        "A01",
+        "A01",
+        "A01"
+      ]
+    },
+    {
+      "query_id": "A01-DrNykter-72",
+      "eco": "A01",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 441,
+      "top_ecos": [
+        "A01",
+        "A01",
+        "B13",
+        "B13",
+        "E14",
+        "E32",
+        "E12",
+        "A04",
+        "E12",
+        "A04"
+      ]
+    },
+    {
+      "query_id": "A05-nihalsar-24",
+      "eco": "A05",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 115,
+      "top_ecos": [
+        "A05",
+        "A05",
+        "A01",
+        "A01",
+        "E10",
+        "C29",
+        "B12",
+        "B12",
+        "B12",
+        "B12"
+      ]
+    },
+    {
+      "query_id": "A05-DrNykter-76",
+      "eco": "A05",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 124,
+      "top_ecos": [
+        "A05",
+        "A05",
+        "A05",
+        "A05",
+        "A05",
+        "C91",
+        "C91",
+        "C91",
+        "D01",
+        "A41"
+      ]
+    },
+    {
+      "query_id": "A06-Zhigalko-36",
+      "eco": "A06",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 57,
+      "top_ecos": [
+        "A06",
+        "D35",
+        "B53",
+        "E00",
+        "A45",
+        "A45",
+        "A45",
+        "A45",
+        "D35",
+        "A46"
+      ]
+    },
+    {
+      "query_id": "A06-penguing-68",
+      "eco": "A06",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 52,
+      "top_ecos": [
+        "A06",
+        "D35",
+        "A14",
+        "D58",
+        "E54",
+        "C10",
+        "E46",
+        "D00",
+        "B23",
+        "C58"
+      ]
+    },
+    {
+      "query_id": "A07-penguing-0",
+      "eco": "A07",
+      "first_relevant_rank": 1,
+      "relevance_pool_size": 169,
+      "top_ecos": [
+        "A07",
+        "A05",
+        "A06",
+        "D77",
+        "A15",
+        "E52",
+        "A08",
+        "A05",
+        "A06",
+        "A05"
+      ]
+    },
+    {
+      "query_id": "A07-Zhigalko-92",
+      "eco": "A07",
+      "first_relevant_rank": 15,
+      "relevance_pool_size": 180,
+      "top_ecos": [
+        "A07",
+        "A07",
+        "C91",
+        "E60",
+        "B03",
+        "A47",
+        "B03",
+        "A36",
+        "C58",
+        "C58"
+      ]
+    },
+    {
+      "query_id": "A40-nihalsar-0",
+      "eco": "A40",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 73,
+      "top_ecos": [
+        "E12",
+        "D46",
+        "E11",
+        "D00",
+        "E04",
+        "D35",
+        "D31",
+        "D00",
+        "D37",
+        "D31"
+      ]
+    },
+    {
+      "query_id": "A40-DrNykter-12",
+      "eco": "A40",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 75,
+      "top_ecos": [
+        "A40",
+        "A40",
+        "B12",
+        "A44",
+        "D31",
+        "D31",
+        "C30",
+        "C60",
+        "D35",
+        "D35"
+      ]
+    },
+    {
+      "query_id": "A45-Zhigalko-8",
+      "eco": "A45",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 211,
+      "top_ecos": [
+        "A45",
+        "E21",
+        "A45",
+        "B23",
+        "A45",
+        "C03",
+        "C55",
+        "C50",
+        "C47",
+        "B12"
+      ]
+    },
+    {
+      "query_id": "A45-nihalsar-48",
+      "eco": "A45",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 189,
+      "top_ecos": [
+        "A45",
+        "A45",
+        "A45",
+        "D31",
+        "A45",
+        "A46",
+        "E94",
+        "E94",
+        "B06",
+        "B06"
+      ]
+    },
+    {
+      "query_id": "A46-nihalsar-24",
+      "eco": "A46",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 242,
+      "top_ecos": [
+        "A46",
+        "A46",
+        "A46",
+        "B21",
+        "B21",
+        "C87",
+        "A62",
+        "B21",
+        "E60",
+        "E32"
+      ]
+    },
+    {
+      "query_id": "A46-Zhigalko-52",
+      "eco": "A46",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 248,
+      "top_ecos": [
+        "A46",
+        "A46",
+        "C92",
+        "A01",
+        "A01",
+        "E12",
+        "A05",
+        "E60",
+        "A45",
+        "B15"
+      ]
+    },
+    {
+      "query_id": "A47-nihalsar-8",
+      "eco": "A47",
+      "first_relevant_rank": 2,
+      "relevance_pool_size": 62,
+      "top_ecos": [
+        "A47",
+        "A47",
+        "A47",
+        "E60",
+        "A47",
+        "A47",
+        "A47",
+        "A00",
+        "A47",
+        "A46"
+      ]
+    },
+    {
+      "query_id": "A47-nihalsar-80",
+      "eco": "A47",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 65,
+      "top_ecos": [
+        "A47",
+        "A47",
+        "A47",
+        "A47",
+        "A47",
+        "A47",
+        "A47",
+        "B01",
+        "A04",
+        "E14"
+      ]
+    },
+    {
+      "query_id": "A48-DrNykter-52",
+      "eco": "A48",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 68,
+      "top_ecos": [
+        "A48",
+        "C25",
+        "E20",
+        "E20",
+        "D35",
+        "A46",
+        "B22",
+        "A45",
+        "A01",
+        "E52"
+      ]
+    },
+    {
+      "query_id": "A48-DrNykter-60",
+      "eco": "A48",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 50,
+      "top_ecos": [
+        "A48",
+        "A48",
+        "A48",
+        "A48",
+        "A48",
+        "A48",
+        "A48",
+        "A48",
+        "B20",
+        "B06"
+      ]
+    },
+    {
+      "query_id": "B00-DrNykter-68",
+      "eco": "B00",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 41,
+      "top_ecos": [
+        "B00",
+        "A45",
+        "C88",
+        "A46",
+        "A46",
+        "A01",
+        "C10",
+        "A05",
+        "A46",
+        "A46"
+      ]
+    },
+    {
+      "query_id": "B00-DrNykter-28",
+      "eco": "B00",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 41,
+      "top_ecos": [
+        "B00",
+        "B00",
+        "B94",
+        "C41",
+        "B00",
+        "A45",
+        "B51",
+        "B51",
+        "A01",
+        "C50"
+      ]
+    },
+    {
+      "query_id": "B01-DrNykter-12",
+      "eco": "B01",
+      "first_relevant_rank": 13,
+      "relevance_pool_size": 304,
+      "top_ecos": [
+        "B01",
+        "B06",
+        "B53",
+        "D01",
+        "B15",
+        "B00",
+        "C41",
+        "C45",
+        "A01",
+        "A42"
+      ]
+    },
+    {
+      "query_id": "B01-DrNykter-128",
+      "eco": "B01",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 304,
+      "top_ecos": [
+        "B01",
+        "B01",
+        "B01",
+        "B01",
+        "B01",
+        "D35",
+        "E12",
+        "A01",
+        "C54",
+        "B15"
+      ]
+    },
+    {
+      "query_id": "B06-Zhigalko-4",
+      "eco": "B06",
+      "first_relevant_rank": 1,
+      "relevance_pool_size": 80,
+      "top_ecos": [
+        "B06",
+        "B06",
+        "B06",
+        "B06",
+        "B06",
+        "A42",
+        "B06",
+        "B06",
+        "A41",
+        "A40"
+      ]
+    },
+    {
+      "query_id": "B06-nihalsar-20",
+      "eco": "B06",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 63,
+      "top_ecos": [
+        "B06",
+        "B06",
+        "C02",
+        "D00",
+        "B01",
+        "B33",
+        "B01",
+        "D31",
+        "B01",
+        "B12"
+      ]
+    },
+    {
+      "query_id": "B12-Zhigalko-56",
+      "eco": "B12",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 387,
+      "top_ecos": [
+        "B12",
+        "B06",
+        "E71",
+        "A05",
+        "A05",
+        "A05",
+        "A05",
+        "A05",
+        "A51",
+        "A04"
+      ]
+    },
+    {
+      "query_id": "B12-Zhigalko-8",
+      "eco": "B12",
+      "first_relevant_rank": 1,
+      "relevance_pool_size": 387,
+      "top_ecos": [
+        "B12",
+        "B12",
+        "B12",
+        "B12",
+        "B12",
+        "B12",
+        "B12",
+        "B12",
+        "B12",
+        "B12"
+      ]
+    },
+    {
+      "query_id": "B20-DrNykter-48",
+      "eco": "B20",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 66,
+      "top_ecos": [
+        "B20",
+        "B20",
+        "B20",
+        "B47",
+        "A01",
+        "B27",
+        "A01",
+        "A46",
+        "A48",
+        "A46"
+      ]
+    },
+    {
+      "query_id": "B20-DrNykter-112",
+      "eco": "B20",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 66,
+      "top_ecos": [
+        "B20",
+        "B20",
+        "B20",
+        "B20",
+        "B20",
+        "B20",
+        "B20",
+        "A04",
+        "A04",
+        "D30"
+      ]
+    },
+    {
+      "query_id": "B22-Zhigalko-16",
+      "eco": "B22",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 85,
+      "top_ecos": [
+        "B22",
+        "B22",
+        "E48",
+        "E54",
+        "E14",
+        "A06",
+        "E54",
+        "E32",
+        "D77",
+        "E32"
+      ]
+    },
+    {
+      "query_id": "B22-Zhigalko-60",
+      "eco": "B22",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 87,
+      "top_ecos": [
+        "B22",
+        "C02",
+        "D00",
+        "C02",
+        "D35",
+        "D35",
+        "C43",
+        "C02",
+        "C43",
+        "C43"
+      ]
+    },
+    {
+      "query_id": "B23-penguing-40",
+      "eco": "B23",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 102,
+      "top_ecos": [
+        "B23",
+        "B23",
+        "B23",
+        "A01",
+        "B23",
+        "A07",
+        "D31",
+        "D31",
+        "C60",
+        "A07"
+      ]
+    },
+    {
+      "query_id": "B23-penguing-40",
+      "eco": "B23",
+      "first_relevant_rank": 20,
+      "relevance_pool_size": 104,
+      "top_ecos": [
+        "B23",
+        "B23",
+        "B23",
+        "B23",
+        "A14",
+        "B30",
+        "A05",
+        "D37",
+        "E93",
+        "A05"
+      ]
+    },
+    {
+      "query_id": "B30-Zhigalko-68",
+      "eco": "B30",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 119,
+      "top_ecos": [
+        "B30",
+        "B30",
+        "B30",
+        "C58",
+        "B30",
+        "C58",
+        "B15",
+        "C02",
+        "C58",
+        "A48"
+      ]
+    },
+    {
+      "query_id": "B30-Zhigalko-36",
+      "eco": "B30",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 127,
+      "top_ecos": [
+        "B30",
+        "B30",
+        "B53",
+        "B30",
+        "B30",
+        "E15",
+        "B06",
+        "E83",
+        "D35",
+        "E71"
+      ]
+    },
+    {
+      "query_id": "B33-DrNykter-104",
+      "eco": "B33",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 27,
+      "top_ecos": [
+        "B33",
+        "E48",
+        "E48",
+        "B33",
+        "E48",
+        "E48",
+        "B01",
+        "B01",
+        "E15",
+        "B52"
+      ]
+    },
+    {
+      "query_id": "B33-DrNykter-20",
+      "eco": "B33",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 27,
+      "top_ecos": [
+        "B33",
+        "E34",
+        "B15",
+        "D05",
+        "B15",
+        "B12",
+        "B06",
+        "E20",
+        "E20",
+        "A45"
+      ]
+    },
+    {
+      "query_id": "B40-penguing-0",
+      "eco": "B40",
+      "first_relevant_rank": 12,
+      "relevance_pool_size": 32,
+      "top_ecos": [
+        "B02",
+        "C02",
+        "B12",
+        "B12",
+        "B30",
+        "B33",
+        "C48",
+        "C60",
+        "B23",
+        "C02"
+      ]
+    },
+    {
+      "query_id": "B40-penguing-68",
+      "eco": "B40",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 23,
+      "top_ecos": [
+        "B40",
+        "B40",
+        "B40",
+        "D77",
+        "A51",
+        "B03",
+        "B53",
+        "A07",
+        "E20",
+        "C67"
+      ]
+    },
+    {
+      "query_id": "B53-Zhigalko-8",
+      "eco": "B53",
+      "first_relevant_rank": 1,
+      "relevance_pool_size": 230,
+      "top_ecos": [
+        "B53",
+        "B53",
+        "B53",
+        "B94",
+        "B81",
+        "B90",
+        "B90",
+        "B94",
+        "B53",
+        "D01"
+      ]
+    },
+    {
+      "query_id": "B53-Zhigalko-136",
+      "eco": "B53",
+      "first_relevant_rank": 13,
+      "relevance_pool_size": 208,
+      "top_ecos": [
+        "B53",
+        "B53",
+        "B53",
+        "B53",
+        "B53",
+        "B53",
+        "B53",
+        "B53",
+        "B53",
+        "B53"
+      ]
+    },
+    {
+      "query_id": "C02-Zhigalko-16",
+      "eco": "C02",
+      "first_relevant_rank": 1,
+      "relevance_pool_size": 101,
+      "top_ecos": [
+        "C02",
+        "C02",
+        "C02",
+        "B12",
+        "B12",
+        "C02",
+        "B12",
+        "D00",
+        "D02",
+        "B43"
+      ]
+    },
+    {
+      "query_id": "C02-Zhigalko-76",
+      "eco": "C02",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 106,
+      "top_ecos": [
+        "C02",
+        "C02",
+        "E15",
+        "E15",
+        "B00",
+        "D01",
+        "B33",
+        "D01",
+        "D01",
+        "B53"
+      ]
+    },
+    {
+      "query_id": "C15-DrNykter-60",
+      "eco": "C15",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 60,
+      "top_ecos": [
+        "C15",
+        "A05",
+        "E90",
+        "B03",
+        "E48",
+        "E90",
+        "E15",
+        "E90",
+        "E48",
+        "A05"
+      ]
+    },
+    {
+      "query_id": "C15-DrNykter-20",
+      "eco": "C15",
+      "first_relevant_rank": 9,
+      "relevance_pool_size": 75,
+      "top_ecos": [
+        "C15",
+        "C10",
+        "B01",
+        "B54",
+        "B54",
+        "C15",
+        "D35",
+        "D32",
+        "C15",
+        "B81"
+      ]
+    },
+    {
+      "query_id": "C47-nihalsar-4",
+      "eco": "C47",
+      "first_relevant_rank": 2,
+      "relevance_pool_size": 47,
+      "top_ecos": [
+        "C48",
+        "C47",
+        "C47",
+        "C48",
+        "C47",
+        "C44",
+        "C25",
+        "C25",
+        "C45",
+        "C44"
+      ]
+    },
+    {
+      "query_id": "C47-nihalsar-48",
+      "eco": "C47",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 34,
+      "top_ecos": [
+        "C47",
+        "C47",
+        "C47",
+        "C47",
+        "C29",
+        "E15",
+        "E91",
+        "D38",
+        "A09",
+        "D01"
+      ]
+    },
+    {
+      "query_id": "C50-nihalsar-48",
+      "eco": "C50",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 54,
+      "top_ecos": [
+        "C50",
+        "C50",
+        "C50",
+        "A00",
+        "D30",
+        "B30",
+        "B52",
+        "A45",
+        "A45",
+        "D35"
+      ]
+    },
+    {
+      "query_id": "C50-penguing-12",
+      "eco": "C50",
+      "first_relevant_rank": 2,
+      "relevance_pool_size": 80,
+      "top_ecos": [
+        "C50",
+        "C50",
+        "C55",
+        "C55",
+        "C48",
+        "C50",
+        "C55",
+        "C55",
+        "C50",
+        "C55"
+      ]
+    },
+    {
+      "query_id": "C55-Zhigalko-24",
+      "eco": "C55",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 51,
+      "top_ecos": [
+        "C55",
+        "C48",
+        "A01",
+        "C26",
+        "C67",
+        "A05",
+        "C67",
+        "A05",
+        "B30",
+        "A01"
+      ]
+    },
+    {
+      "query_id": "C55-penguing-48",
+      "eco": "C55",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 47,
+      "top_ecos": [
+        "C55",
+        "C55",
+        "C55",
+        "C55",
+        "C55",
+        "E14",
+        "A65",
+        "E15",
+        "D05",
+        "B06"
+      ]
+    },
+    {
+      "query_id": "C58-Zhigalko-24",
+      "eco": "C58",
+      "first_relevant_rank": 4,
+      "relevance_pool_size": 79,
+      "top_ecos": [
+        "C58",
+        "C58",
+        "C58",
+        "C58",
+        "C58",
+        "C58",
+        "C58",
+        "A57",
+        "A57",
+        "A57"
+      ]
+    },
+    {
+      "query_id": "C58-penguing-96",
+      "eco": "C58",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 73,
+      "top_ecos": [
+        "C58",
+        "C58",
+        "C58",
+        "B01",
+        "B01",
+        "B01",
+        "E14",
+        "C58",
+        "B01",
+        "E94"
+      ]
+    },
+    {
+      "query_id": "C60-penguing-56",
+      "eco": "C60",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 114,
+      "top_ecos": [
+        "C60",
+        "C60",
+        "E32",
+        "B53",
+        "A05",
+        "A00",
+        "A65",
+        "B15",
+        "B15",
+        "A65"
+      ]
+    },
+    {
+      "query_id": "C60-penguing-4",
+      "eco": "C60",
+      "first_relevant_rank": 2,
+      "relevance_pool_size": 107,
+      "top_ecos": [
+        "C60",
+        "C60",
+        "C67",
+        "C65",
+        "C91",
+        "C67",
+        "C60",
+        "C88",
+        "C98",
+        "C60"
+      ]
+    },
+    {
+      "query_id": "D00-penguing-4",
+      "eco": "D00",
+      "first_relevant_rank": 1,
+      "relevance_pool_size": 289,
+      "top_ecos": [
+        "D00",
+        "D00",
+        "D00",
+        "D00",
+        "D00",
+        "D00",
+        "D00",
+        "D00",
+        "D00",
+        "D00"
+      ]
+    },
+    {
+      "query_id": "D00-penguing-4",
+      "eco": "D00",
+      "first_relevant_rank": 1,
+      "relevance_pool_size": 292,
+      "top_ecos": [
+        "D00",
+        "D00",
+        "D00",
+        "D00",
+        "D00",
+        "D00",
+        "D00",
+        "D00",
+        "D00",
+        "D00"
+      ]
+    },
+    {
+      "query_id": "D02-nihalsar-0",
+      "eco": "D02",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 53,
+      "top_ecos": [
+        "E12",
+        "D46",
+        "E11",
+        "D00",
+        "E04",
+        "D35",
+        "D31",
+        "D00",
+        "D37",
+        "D31"
+      ]
+    },
+    {
+      "query_id": "D02-penguing-12",
+      "eco": "D02",
+      "first_relevant_rank": 17,
+      "relevance_pool_size": 68,
+      "top_ecos": [
+        "D00",
+        "D02",
+        "A46",
+        "A36",
+        "C48",
+        "D31",
+        "D31",
+        "E90",
+        "D00",
+        "D31"
+      ]
+    },
+    {
+      "query_id": "D05-nihalsar-108",
+      "eco": "D05",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 71,
+      "top_ecos": [
+        "D05",
+        "B01",
+        "B01",
+        "B01",
+        "B01",
+        "D37",
+        "B15",
+        "B01",
+        "B15",
+        "C54"
+      ]
+    },
+    {
+      "query_id": "D05-nihalsar-124",
+      "eco": "D05",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 71,
+      "top_ecos": [
+        "D05",
+        "D05",
+        "D05",
+        "C88",
+        "E12",
+        "E12",
+        "A46",
+        "A46",
+        "A46",
+        "B03"
+      ]
+    },
+    {
+      "query_id": "D31-penguing-48",
+      "eco": "D31",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 136,
+      "top_ecos": [
+        "D31",
+        "D31",
+        "D31",
+        "D00",
+        "D38",
+        "A46",
+        "A46",
+        "D00",
+        "A45",
+        "D31"
+      ]
+    },
+    {
+      "query_id": "D31-penguing-16",
+      "eco": "D31",
+      "first_relevant_rank": 7,
+      "relevance_pool_size": 164,
+      "top_ecos": [
+        "D31",
+        "D35",
+        "D35",
+        "D35",
+        "D35",
+        "D31",
+        "D31",
+        "D35",
+        "D37",
+        "A45"
+      ]
+    },
+    {
+      "query_id": "D35-nihalsar-56",
+      "eco": "D35",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 179,
+      "top_ecos": [
+        "D35",
+        "D35",
+        "D35",
+        "B01",
+        "B01",
+        "E52",
+        "B01",
+        "E12",
+        "B01",
+        "E90"
+      ]
+    },
+    {
+      "query_id": "D35-nihalsar-64",
+      "eco": "D35",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 175,
+      "top_ecos": [
+        "D35",
+        "B20",
+        "B02",
+        "B81",
+        "B81",
+        "A41",
+        "E11",
+        "E11",
+        "A41",
+        "E00"
+      ]
+    },
+    {
+      "query_id": "D37-nihalsar-32",
+      "eco": "D37",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 62,
+      "top_ecos": [
+        "D37",
+        "D63",
+        "B20",
+        "D37",
+        "D43",
+        "A07",
+        "A46",
+        "D43",
+        "A46",
+        "B17"
+      ]
+    },
+    {
+      "query_id": "D37-nihalsar-12",
+      "eco": "D37",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 55,
+      "top_ecos": [
+        "D37",
+        "D58",
+        "E21",
+        "A06",
+        "C50",
+        "C50",
+        "C03",
+        "C47",
+        "A13",
+        "C03"
+      ]
+    },
+    {
+      "query_id": "D38-nihalsar-4",
+      "eco": "D38",
+      "first_relevant_rank": 16,
+      "relevance_pool_size": 75,
+      "top_ecos": [
+        "E11",
+        "D63",
+        "E15",
+        "D38",
+        "E14",
+        "E15",
+        "D43",
+        "E12",
+        "E15",
+        "E15"
+      ]
+    },
+    {
+      "query_id": "D38-nihalsar-0",
+      "eco": "D38",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 77,
+      "top_ecos": [
+        "E12",
+        "D46",
+        "E11",
+        "D00",
+        "E04",
+        "D35",
+        "D31",
+        "D00",
+        "D37",
+        "D31"
+      ]
+    },
+    {
+      "query_id": "E11-nihalsar-136",
+      "eco": "E11",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 72,
+      "top_ecos": [
+        "E11",
+        "E11",
+        "E11",
+        "E11",
+        "A46",
+        "E15",
+        "B12",
+        "D35",
+        "B33",
+        "A48"
+      ]
+    },
+    {
+      "query_id": "E11-nihalsar-184",
+      "eco": "E11",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 63,
+      "top_ecos": [
+        "E11",
+        "E11",
+        "E11",
+        "E11",
+        "E11",
+        "E11",
+        "E11",
+        "E11",
+        "B27",
+        "B01"
+      ]
+    },
+    {
+      "query_id": "E12-nihalsar-128",
+      "eco": "E12",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 104,
+      "top_ecos": [
+        "E12",
+        "E12",
+        "B02",
+        "B02",
+        "B03",
+        "D02",
+        "E12",
+        "D02",
+        "B02",
+        "D02"
+      ]
+    },
+    {
+      "query_id": "E12-nihalsar-148",
+      "eco": "E12",
+      "first_relevant_rank": 19,
+      "relevance_pool_size": 104,
+      "top_ecos": [
+        "E12",
+        "E12",
+        "E12",
+        "E12",
+        "D02",
+        "D02",
+        "A46",
+        "B01",
+        "E20",
+        "D31"
+      ]
+    },
+    {
+      "query_id": "E15-Zhigalko-120",
+      "eco": "E15",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 85,
+      "top_ecos": [
+        "E15",
+        "E20",
+        "E20",
+        "E20",
+        "E20",
+        "B00",
+        "B00",
+        "B01",
+        "B01",
+        "B01"
+      ]
+    },
+    {
+      "query_id": "E15-Zhigalko-64",
+      "eco": "E15",
+      "first_relevant_rank": 6,
+      "relevance_pool_size": 95,
+      "top_ecos": [
+        "E15",
+        "E15",
+        "E15",
+        "A07",
+        "D38",
+        "E15",
+        "E94",
+        "E15",
+        "E94",
+        "E21"
+      ]
+    },
+    {
+      "query_id": "E20-Zhigalko-84",
+      "eco": "E20",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 45,
+      "top_ecos": [
+        "E20",
+        "E20",
+        "B51",
+        "C54",
+        "C54",
+        "B51",
+        "B01",
+        "B52",
+        "D00",
+        "B52"
+      ]
+    },
+    {
+      "query_id": "E20-Zhigalko-112",
+      "eco": "E20",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 45,
+      "top_ecos": [
+        "E20",
+        "E20",
+        "E20",
+        "E15",
+        "B00",
+        "E20",
+        "B00",
+        "B03",
+        "C88",
+        "B01"
+      ]
+    },
+    {
+      "query_id": "E32-penguing-28",
+      "eco": "E32",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 72,
+      "top_ecos": [
+        "E32",
+        "E32",
+        "E20",
+        "E20",
+        "E43",
+        "E32",
+        "A45",
+        "A01",
+        "D58",
+        "A46"
+      ]
+    },
+    {
+      "query_id": "E32-penguing-12",
+      "eco": "E32",
+      "first_relevant_rank": null,
+      "relevance_pool_size": 72,
+      "top_ecos": [
+        "E32",
+        "E12",
+        "E12",
+        "E43",
+        "B22",
+        "B40",
+        "A00",
+        "A47",
+        "B40",
+        "C02"
+      ]
+    }
+  ]
+}

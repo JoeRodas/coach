@@ -1,3 +1,14 @@
+---
+title: Coach
+emoji: ♟️
+colorFrom: indigo
+colorTo: purple
+sdk: docker
+app_port: 8080
+pinned: false
+license: mit
+---
+
 # Coach
 
 Conversational chess coach. You paste a PGN, it tells you where you went
