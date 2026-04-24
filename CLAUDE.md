@@ -64,11 +64,18 @@ component by component, **not big-bang**. Coach is live; do not break it.
 
 ### What's actually deployed right now
 
-- **App**: Hugging Face Space `NuezMiami/coach`, Docker SDK, free CPU tier,
-  16 GB RAM. Native URL `https://nuezmiami-coach.hf.space`.
-- **Domain**: Cloudflare Worker `steep-cell-2bea` reverse-proxies
-  `chesscoach.nuezmiami.com/*` → HF Space. Code at
+- **App (Phase 1 prod)**: Hugging Face Space `NuezMiami/coach`, Docker SDK,
+  free CPU tier, 16 GB RAM. Native URL `https://nuezmiami-coach.hf.space`.
+- **Domain (Phase 1 prod)**: Cloudflare Worker `steep-cell-2bea`
+  reverse-proxies `chesscoach.nuezmiami.com/*` → HF Space. Code at
   `deploy/cloudflare-worker.js`.
+- **Phase 2 SPA staging**: Cloudflare Pages project `coach-frontend`,
+  auto-deploys on every push to `main`. Build cmd
+  `pnpm install --frozen-lockfile && pnpm build`, build output
+  `frontend/dist`, root dir `frontend`, `NODE_VERSION=22.14.0`. Live at
+  <https://coach-frontend.pages.dev> and (pending DNS) at
+  `chesscoach-v2.nuezmiami.com`. The §7 cutover swaps the Worker route
+  from HF Space → Pages once PR-3 ships.
 - **Secrets**: `ANTHROPIC_API_KEY` is set as an HF Space secret in the
   Space settings, not in any repo file.
 - **Why not Fly.io** (which the spec assumes): user has no credit card on
@@ -285,7 +292,7 @@ then we have an encoder-architecture problem, not a training problem.
 - [x] CLAUDE.md (this file) created.
 - [x] Neon project created, `DATABASE_URL` in `.env`, pgvector 0.8.0 verified.
 - [~] §6.1 frontend rebuild (React + TS + Vite + Tailwind).
-  - [x] PR-1 scaffold merged (`8518781`). Cloudflare Pages: `coach` project on `coach.pages.dev`, custom domain `chesscoach-v2.nuezmiami.com` pending.
+  - [x] PR-1 scaffold merged (`8518781`). Cloudflare Pages project `coach-frontend` live at <https://coach-frontend.pages.dev> (verified rendering 2026-04-24). Custom domain `chesscoach-v2.nuezmiami.com` pending DNS/SSL provisioning. Note: an earlier Worker named `coach` was created by mistake during dashboard navigation; if it still exists, delete it (housekeeping, no functional impact).
   - [ ] PR-2 analyze flow with Phase 1 parity.
   - [ ] PR-3 metrics page (renders mock until §6.7 backend exists).
 - [ ] §6.2 encoder retrained at 256-dim with eval-similarity positives.
