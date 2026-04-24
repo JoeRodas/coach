@@ -103,7 +103,7 @@ zip, npz indexes, .pt checkpoints) are gitignored.
 |---|---|---|
 | Backend | FastAPI (Python 3.11+) | Existing. |
 | Frontend | React 18 + TypeScript + Vite + Tailwind + react-query | New, §6.1. |
-| Database | **Neon** Postgres + pgvector | Spec said Fly managed Postgres; we use Neon (free tier, no card, supports pgvector). Documented choice. |
+| Database | **Neon** Postgres 17.8 + pgvector 0.8.0 | Spec said Fly managed Postgres; we use Neon (free tier, no card). pgvector 0.8.0 supports HNSW, so we use HNSW not IVFFlat. |
 | ML framework | PyTorch 2.x | Existing. |
 | Pipeline | Apache Airflow | Existing `pipelines/ingest.py` becomes a DAG, §6.3. |
 | Engine | Stockfish | Existing. |
@@ -163,9 +163,11 @@ section and ask before changing course.
 
 ## 5. Open blockers / deps to resolve
 
-- **Neon project not yet created.** User must sign up and produce a
-  `DATABASE_URL`. Until that lands, §6.3, §6.4, §6.5, §6.7 are blocked
-  on persistence.
+- ~~Neon project not yet created.~~ **Done 2026-04-24.** Project
+  `chesscoach`, branch `production`, db `neondb`, pooled endpoint
+  `ep-fancy-heart-an5mvv2b-pooler.c-6.us-east-1.aws.neon.tech`. pgvector
+  0.8.0 confirmed working (round-trip cosine-distance query returned 0.0).
+  `DATABASE_URL` is in local `.env` (gitignored).
 - **Theme vocabulary + seed labels not yet authored.** User to deliver
   ~20 themes and ~40–50 hand-labeled positions. Until that lands,
   retrieval eval can't switch to the spec's themes-based metric.
@@ -241,7 +243,7 @@ input strings, spotted the ECO in the indexed text.
 
 - [x] Anchor commit of all in-flight Phase 2 work — `44960c4`.
 - [x] CLAUDE.md (this file) created.
-- [ ] Neon project created, `DATABASE_URL` in `.env`.
+- [x] Neon project created, `DATABASE_URL` in `.env`, pgvector 0.8.0 verified.
 - [ ] §6.1 frontend rebuild (React + TS + Vite + Tailwind).
 - [ ] §6.2 encoder retrained at 256-dim with eval-similarity positives.
 - [ ] §6.3 Airflow DAG for Lichess ingestion.
