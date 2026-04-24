@@ -237,6 +237,46 @@ input strings, spotted the ECO in the indexed text.
   present in the embedding input*. Anonymizing player names (which the
   query generator already did) was insufficient — ECO was the leak.
 
+### 2026-04-24 (later) — Encoder loss vs retrieval: a 5× training run only buys ~13% retrieval gain
+
+**What:** Re-ran the InfoNCE encoder for the full 10 epochs originally
+planned, then re-scored against the same 80-query benchmark. Loss curve
+flattened cleanly — from 1.65 (epoch 0) to 0.49 (epoch 9), most of the
+descent done by epoch 4. Retrieval numbers, same index, same queries:
+
+| stage | loss | recall@20 | recall@10 | mrr@20 |
+|---|---|---|---|---|
+| Phase 1 clean (no encoder) | — | 0.050 | 0.013 | 0.004 |
+| Phase 2 encoder, 2 epochs | 2.60 | 0.287 | 0.188 | 0.128 |
+| Phase 2 encoder, 10 epochs | 0.49 | **0.325** | **0.237** | **0.134** |
+| random | — | 0.222 | — | — |
+
+**The interesting bit:** training loss dropped **81%** (2.60 → 0.49) but
+retrieval Recall@20 only improved **13% relative** (0.287 → 0.325).
+Recall@10 saw the largest gain (+26%); MRR@20 barely moved (+5%). That
+gap is the encoder hitting the ceiling of what its current training
+signal can teach.
+
+**Probable cause:** the only positive-pair signal we feed it is "two
+adjacent retained plies from the same game." That's enough for the model
+to learn coarse positional similarity — pieces in roughly the same
+places, similar pawn structures — but it never sees a signal that
+distinguishes "same opening idea" from "same midgame structure." The
+benchmark's relevance rule is *same ECO* (i.e. same opening), so the
+encoder is being graded on a dimension its training data doesn't isolate.
+
+**Implication for §6.2:** the spec's required positive-pair definition
+(*"same game within ±3 plies AND similar evaluation"*) is exactly the
+right next move — it adds a tactical/strategic-state filter that should
+push the encoder toward what the benchmark is actually measuring. Plus
+the spec's 256-dim output (we trained at 128) gives more capacity. If
+both of those changes don't push Recall@20 substantially past 0.325,
+then we have an encoder-architecture problem, not a training problem.
+
+**Saved artifacts:**
+- `evals/results/phase2-2ep-2026-04-24.json` — the early-stop run
+- `evals/results/phase2-10ep-2026-04-24.json` — the planned-length run
+
 ---
 
 ## 7. Status snapshot (updated as work progresses)
