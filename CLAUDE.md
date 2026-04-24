@@ -284,7 +284,10 @@ then we have an encoder-architecture problem, not a training problem.
 - [x] Anchor commit of all in-flight Phase 2 work — `44960c4`.
 - [x] CLAUDE.md (this file) created.
 - [x] Neon project created, `DATABASE_URL` in `.env`, pgvector 0.8.0 verified.
-- [ ] §6.1 frontend rebuild (React + TS + Vite + Tailwind).
+- [~] §6.1 frontend rebuild (React + TS + Vite + Tailwind).
+  - [x] PR-1 scaffold merged (`8518781`). Cloudflare Pages: `coach` project on `coach.pages.dev`, custom domain `chesscoach-v2.nuezmiami.com` pending.
+  - [ ] PR-2 analyze flow with Phase 1 parity.
+  - [ ] PR-3 metrics page (renders mock until §6.7 backend exists).
 - [ ] §6.2 encoder retrained at 256-dim with eval-similarity positives.
 - [ ] §6.3 Airflow DAG for Lichess ingestion.
 - [ ] §6.4 Postgres + pgvector schema and migration.
