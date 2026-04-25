@@ -1,6 +1,12 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, NavLink, Route, Routes } from "react-router-dom";
 import AnalyzePage from "./pages/AnalyzePage";
 import MetricsPage from "./pages/MetricsPage";
+import PlayPage from "./pages/PlayPage";
+
+const navLinkClass = ({ isActive }: { isActive: boolean }) =>
+  `text-sm transition-colors ${
+    isActive ? "text-slate-900 font-medium" : "text-slate-600 hover:text-slate-900"
+  }`;
 
 export default function App() {
   return (
@@ -10,14 +16,23 @@ export default function App() {
           <Link to="/" className="text-lg font-semibold tracking-tight">
             Coach
           </Link>
-          <Link to="/admin/metrics" className="text-sm text-slate-600 hover:text-slate-900">
-            Admin · Metrics
-          </Link>
+          <div className="flex items-center gap-5">
+            <NavLink to="/play" className={navLinkClass}>
+              Play
+            </NavLink>
+            <NavLink to="/" end className={navLinkClass}>
+              Analyze
+            </NavLink>
+            <NavLink to="/admin/metrics" className={navLinkClass}>
+              Admin · Metrics
+            </NavLink>
+          </div>
         </nav>
       </header>
       <main className="mx-auto max-w-5xl px-6 py-10">
         <Routes>
           <Route path="/" element={<AnalyzePage />} />
+          <Route path="/play" element={<PlayPage />} />
           <Route path="/admin/metrics" element={<MetricsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
